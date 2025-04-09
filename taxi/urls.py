@@ -51,16 +51,16 @@ urlpatterns = [
         "drivers/create/", DriverCreateView.as_view(), name="driver-create"
     ),
     path(
-        "drivers/<int:pk>/delete", DriverDeleteView.as_view(),
+        "drivers/<int:pk>/delete/", DriverDeleteView.as_view(),
         name="driver-delete"
     ),
     path(
-        "drivers/<int:pk>/update", DriverUpdateView.as_view(),
+        "drivers/<int:pk>/update/", DriverUpdateView.as_view(),
         name="driver-update"
     ),
-    path("delete_from_car/<int:car_id>", delete_from_car,
+    path("delete_from_car/<int:car_id>/", delete_from_car,
          name="delete-from-car"),
-    path("add_to_car/<int:car_id>", add_to_car, name="add-to-car")
+    path("add_to_car/<int:car_id>/", add_to_car, name="add-to-car")
 ]
 
 app_name = "taxi"
